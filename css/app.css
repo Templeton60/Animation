@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+/* HEADING ANIMATE */
+h1 {
+  /* outline: 1px solid red; */
+  text-align: center;
+  color: white;
+  font-family: 'Pacifico', cursive;
+  background-image: url(../img/wood.jpg);
+  height:150px;
+  line-height: 150px;
+  font-size: 4em;
+  animation: slide 2s ease;
+  animation-fill-mode: forwards;
+  z-index: 100;
+}
+
+.head {
+  position: relative;
+  top: -200px;
+  margin: auto;
+  width:800px;
+}
+
+.bars {
+  position: absolute;
+  left: 50px;
+  top: -150px;
+  border:20px solid black;
+  height: 250px;
+  width: 700px;
+  animation: slide 2s ease;
+  animation-fill-mode: forwards;
+  z-index: -1;
+}
+
+@keyframes slide {
+  0% {}
+  100% {transform: translateY(300px);}
+}
+
+/* HEADING ANIMATE END */
+
+.viewmini {
+  width: 150px;
+  height: 150px;
+  transition: all .5s;
+  animation-name: round;
+  padding: 20px;
+  position: relative;
+  /* top:10px;
+  left:20px; */
+  top:100px;
+
+}
+
+#main .view {
+  width: 350px;
+  height: 350px;
+  transition: all .5s;
+  animation-name: round;
+  padding: 20px;
+}
+
+
+.view:hover .round{
+  background-image: url(../img/woodvert.jpg);
+  opacity: .8;
+}
+
+@keyframes round {
+  0% {border-radius: 100%;}
+  100% {border-radius:0%;}
+}
+
+
+.round:hover {
+  transition: all .5s ease;
+  border-radius: 50%;
+  padding: 20px;
+}
+
+
+
+body {
+  /* background: linear-gradient(270deg, #ef84d5, #eded65, #7ed46d, #3a98eb);
+  background-size: 800% 800%; */
+
+  background-image: url(http://api.thumbr.it/whitenoise-361x370.png?background=faf7edff&noise=626262&density=14&opacity=12)
+}
+
+div[class~="grid-container"] {
+  margin-top: 150px;
+}
+
+div[class~="other_pages"] {
+  margin-top: 350px;
+}
+
+/* TRASFORM ANIMATION */
+.center {
+  margin: auto;
+  position: relative;
+  /* outline: 1px solid red; */
+  background-image: url(../img/origami-bird-01.png);
+  width: 500px;
+  height: 500px;
+  z-index: 3;
+}
+
+.left {
+  width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-top: 200px solid #D1A2FF;
+	border-right: 50px solid transparent;
+  position: absolute;
+  bottom: 60px;
+  left:150px;
+  z-index: -1;
+  animation: left 3.5s ease infinite;
+  animation-direction: alternate-reverse;
+
+}
+
+.right {
+  width: 0;
+	height: 0;
+	border-left: 100px solid transparent;
+	border-top: 200px solid #8D17FF;
+	border-right: 35px solid transparent;
+  position: absolute;
+  z-index: 100;
+  top:235px;
+  left:215px;
+  animation: right 3.5s ease infinite;
+  animation-direction: alternate-reverse;
+
+}
+
+@keyframes left {
+  0% { transform: rotateX(180deg);
+    transform-origin: top;}
+  100% {transform: skewX(-50deg);
+    transform-origin: top;}
+
+}
+@keyframes right {
+  0% { transform: rotateX(180deg);
+    transform-origin: top;}
+  100% {transform: skewX(50deg);
+    transform-origin: top;}
+}
+
+/* TRANSFORM ANIMATION END */
